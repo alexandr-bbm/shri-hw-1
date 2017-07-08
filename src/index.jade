@@ -1,0 +1,43 @@
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport', content='width=device-width,initial-scale=1')
+        title Task  1️⃣
+        link(rel='shortcut icon', href='//yastatic.net/iconostasis/_/8lFaTHLDzmsEZz-5XaQg9iTWZGE.jpg')
+        link(rel='stylesheet', href='./styles.css')
+    body
+        .page
+            header.page__heading
+                | Lorem ipsum dolor sit amet, consectetur
+            main.page__content
+                .page__description.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                     esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+                     in culpa qui officia deserunt mollit anim id est laborum.
+                .gallery
+                    - for (var i = 1; i <= 7; i++) {
+                        - var img1x = '../img/full/1x/' + i + '.jpg';
+                        - var img2x = '../img/full/2x/' + i + '.jpg';
+                        .gallery-item.j-gallery-item(
+                            data-src=img1x,
+                            data-srcset=img1x + ' 1x, ' + img2x + ' 2x',
+                        )
+                            - img1x = '../img/previews/1x/' + i + '.jpg';
+                            - img2x = '../img/previews/2x/' + i + '.jpg';
+                            img.gallery-item__image(
+                                data-original=img1x,
+                                data-original-set=img1x + ' 1x, ' + img2x + ' 2x',
+                            )
+                            .gallery-item__title Lorem ipsum
+                    - }
+            footer.page__footer
+                | Lorem ipsum dolor sit amet (c).
+        .modal-container.modal-container_hidden.j-modal-container
+            .gallery-modal
+                .gallery-modal__close ×
+                img.gallery-modal__img.j-gallery-modal__img(src='')
+            .gallery-modal-overlay
+        script(src='./script.bundle.js')

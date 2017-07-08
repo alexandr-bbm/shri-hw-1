@@ -79,40 +79,36 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 main, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, main, menu, nav, section {
-  display: block;
+	display: block;
 }
 body {
-  line-height: 1;
+	line-height: 1;
 }
 ol, ul {
-  list-style: none;
+	list-style: none;
 }
 blockquote, q {
-  quotes: none;
+	quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: '';
-  content: none;
+	content: '';
+	content: none;
 }
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}/* todo reset css */
-/* todo textoverflow */
-
-/* todo ! rem */
-/* todo ! retina */
+	border-collapse: collapse;
+	border-spacing: 0;
+}/* todo textoverflow */
 
 * {
     -webkit-box-sizing: border-box;
@@ -223,13 +219,15 @@ body {
             flex-grow: 1;
     background-color: #fff;
     cursor: pointer;
+    min-height: 300px;
 }
 
 .gallery-item__image {
         height: 250px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 50% 50%;
+        width: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        font-family: 'object-fit: cover;'
     }
 
 .gallery-item__title {
@@ -244,6 +242,8 @@ body {
             -ms-flex-pack: center;
                 justify-content: center;
         background: #fff;
+        padding: 0 20px;
+        white-space: nowrap;
     }
 
 @media (min-width: 768px) {

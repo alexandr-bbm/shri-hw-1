@@ -1,5 +1,6 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: './src/script.js',
@@ -25,10 +26,18 @@ module.exports = {
             presets: ['env']
           }
         }
+      },
+      {
+        test: /\.jade$/,
+        use: 'jade-loader'
       }
     ]
   },
   plugins: [
     new ExtractTextPlugin("styles.css"),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'src/index.jade',
+    }),
   ]
 };

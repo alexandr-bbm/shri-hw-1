@@ -17,10 +17,16 @@
     "babel-preset-env": "^1.6.0",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^2.1.2",
+    "html-webpack-plugin": "^2.29.0",
+    "jade": "^1.11.0",
+    "jade-loader": "^0.8.0",
+    "object-fit-images": "^3.2.3",
     "postcss-custom-media": "^6.0.0",
     "postcss-loader": "^2.0.6",
     "postcss-nested": "^2.0.2",
+    "reset-css": "^2.2.0",
     "style-loader": "^0.18.2",
+    "vanilla-lazyload": "^8.0.1",
     "webpack": "^2.6.1"
   }
 }

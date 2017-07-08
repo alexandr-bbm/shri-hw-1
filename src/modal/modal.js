@@ -29,8 +29,13 @@ export class FullImageModal {
     });
   }
 
-  open(src) {
+  setImgSrc(src, srcset) {
     this.imgEl.setAttribute('src', src);
+    this.imgEl.setAttribute('srcset', srcset);
+  }
+
+  open(src, srcset) {
+    this.setImgSrc(src, srcset);
     this.bodyEl.classList.add('body_no-scroll');
     this.containerEl.classList.remove('modal-container_hidden');
     this.containerEl.classList.add('modal-container_transparent');
@@ -41,7 +46,7 @@ export class FullImageModal {
     this.containerEl.classList.remove('modal-container_transparent');
     setTimeout(() => {
       this.containerEl.classList.add('modal-container_hidden');
-      this.imgEl.setAttribute('src', '');
+      this.setImgSrc('', '')
     }, TRANSITION_DURATION)
   }
 }
