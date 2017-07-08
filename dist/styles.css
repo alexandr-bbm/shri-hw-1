@@ -108,9 +108,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}/* todo textoverflow */
-
-* {
+}* {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
 }
@@ -133,10 +131,14 @@ html {
 }
     }
 
-body {
+.body {
     font-family: Arial, sans-serif;
     background: lightgrey;
 }
+
+.body_no-scroll {
+        overflow: hidden;
+    }
 
 .page {
     display: -webkit-box;
@@ -175,10 +177,6 @@ body {
 .page__footer {
         margin: 20px 0;
     }
-
-.body_no-scroll {
-    overflow: hidden;
-}
 
 .gallery {
     display: -webkit-box;

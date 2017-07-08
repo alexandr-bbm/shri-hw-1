@@ -13,9 +13,13 @@ html {
     }
 }
 
-body {
+.body {
     font-family: Arial, sans-serif;
     background: lightgrey;
+
+    &_no-scroll {
+        overflow: hidden;
+    }
 }
 
 .page {
@@ -47,10 +51,6 @@ body {
     &__footer {
         margin: 20px 0;
     }
-}
-
-.body_no-scroll {
-    overflow: hidden;
 }
 
 .gallery {
