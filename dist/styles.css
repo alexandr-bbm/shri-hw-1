@@ -45,16 +45,15 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: opacity ease .3s;
-  transition: opacity ease .3s
+  transition: opacity ease .3s;
+  will-change: opacity;
 }
 
 .modal-container_hidden {
-  visibility: hidden;
-}
-.modal-container_transparent {
-  opacity: 1;
+  pointer-events: none;
+  opacity: 0;
 }
 
 .gallery-modal-overlay {

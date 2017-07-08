@@ -38,15 +38,10 @@ export class FullImageModal {
     this.setImgSrc(src, srcset);
     this.bodyEl.classList.add('body_no-scroll');
     this.containerEl.classList.remove('modal-container_hidden');
-    this.containerEl.classList.add('modal-container_transparent');
   }
 
   close() {
     this.bodyEl.classList.remove('body_no-scroll');
-    this.containerEl.classList.remove('modal-container_transparent');
-    setTimeout(() => {
-      this.containerEl.classList.add('modal-container_hidden');
-      this.setImgSrc('', '')
-    }, TRANSITION_DURATION)
+    this.containerEl.classList.add('modal-container_hidden');
   }
 }

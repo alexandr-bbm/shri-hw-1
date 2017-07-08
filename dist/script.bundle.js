@@ -130,19 +130,12 @@ var FullImageModal = exports.FullImageModal = function () {
       this.setImgSrc(src, srcset);
       this.bodyEl.classList.add('body_no-scroll');
       this.containerEl.classList.remove('modal-container_hidden');
-      this.containerEl.classList.add('modal-container_transparent');
     }
   }, {
     key: 'close',
     value: function close() {
-      var _this2 = this;
-
       this.bodyEl.classList.remove('body_no-scroll');
-      this.containerEl.classList.remove('modal-container_transparent');
-      setTimeout(function () {
-        _this2.containerEl.classList.add('modal-container_hidden');
-        _this2.setImgSrc('', '');
-      }, TRANSITION_DURATION);
+      this.containerEl.classList.add('modal-container_hidden');
     }
   }]);
 
