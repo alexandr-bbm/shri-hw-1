@@ -41,5 +41,6 @@ export class FullImageModal {
   close() {
     this.bodyEl.classList.remove('body_no-scroll');
     this.containerEl.classList.add('modal-container_hidden');
+    this.setImgSrc('', '');
   }
 }

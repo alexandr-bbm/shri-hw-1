@@ -83,8 +83,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 __webpack_require__(6);
 
-var TRANSITION_DURATION = 300; // завязано на css.
-
 var FullImageModal = exports.FullImageModal = function () {
   /**
    * @param containerSelector {string} id контейнера модалки.
@@ -136,6 +134,7 @@ var FullImageModal = exports.FullImageModal = function () {
     value: function close() {
       this.bodyEl.classList.remove('body_no-scroll');
       this.containerEl.classList.add('modal-container_hidden');
+      this.setImgSrc('', '');
     }
   }]);
 
