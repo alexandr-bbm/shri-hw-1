@@ -1,7 +1,5 @@
 require('./modal.css');
 
-const TRANSITION_DURATION = 300; // завязано на css.
-
 export class FullImageModal {
   /**
    * @param containerSelector {string} id контейнера модалки.
