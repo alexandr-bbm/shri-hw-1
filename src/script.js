@@ -9,6 +9,7 @@ import './styles.css';
 new LazyLoad();
 objectFitImages();
 
+
 const modal = new FullImageModal('.j-modal-container');
 const galleryItems = document.getElementsByClassName('j-gallery-item');
 
